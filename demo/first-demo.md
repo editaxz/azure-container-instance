@@ -27,3 +27,9 @@ az container delete --resource-group cloud-shell-storage-edith-eastus  --name de
 az container list --resource-group cloud-shell-storage-edith-eastus --output table
 
 ```
+
+```
+# Jenkins in ACI
+az container create --image jenkins/jenkins:lts-alpine --name jenkins --resource-group cloud-shell-storage-edith-eastus --ip-address public --port 8080
+az container list
+```
