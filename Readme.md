@@ -1,6 +1,6 @@
-# AZURE CONTAINER INSTANCE
+# Azure Container Instance
 
-# Start with ACI
+## Start with ACI
 ```
 Azure Container Instances makes it easy to create and manage Docker 
 containers in Azure, without having to provision virtual machines or 
