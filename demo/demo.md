@@ -19,22 +19,22 @@ az group create --name demo01 --location eastus
 
 ### Create a container instamce in azure - short mode (docker hub microsoft)
 ```
-az container create --resource-group demo01 --name helloworld --image microsoft/aci-helloworld --ip-address public --ports 8082
+az container create --resource-group demo01 --name helloworld1 --image microsoft/aci-helloworld --ip-address public
 ```
 
 ### Create a container instance in azure - asign cpu and memory (docker hub nginx)
 ```
-az container create -g demo01 --name nginx --image library/nginx --ip-address public --cpu 1 --memory 5
+az container create -g demo01 --name nginx --image library/nginx --ip-address public --cpu 1 --memory 5 --port 80
 ```
 
 ### Create a container instance in azure from azure registry (acr microsoft)
 ```
-az container create --name acrhelloworld04 --image fisica3.azurecr.io/fisica3/helperconfig --registry-password 88GYVMmQ9Qqq8sM+1GQ2FHnq0PTSb/Ja --ip-address public -g demoACIViernesto --ports 5000
+az container create --name acrhelloworld04 --image fisica3.azurecr.io/fisica3/helperconfig --registry-password 88GYVMmQ9Qqq8sM+1GQ2FHnq0PTSb/Ja --ip-address public -g demo01 --ports 5000
 ```
 
 ### Create the container in azure - windows (docker hub microsoft)
 ```
-az container create --name helloworld --image microsoft/iis:nonoserver -g acidemog --ports 8083 --ip-address public --cpu 2 --memory 3.5 --os-type windows
+az container create --name helloworld --image microsoft/iis:nanoserver -g demo01 --ports 8083 --ip-address public --cpu 2 --memory 3.5 --os-type windows
 ```
 
 ## Consultas
@@ -54,7 +54,7 @@ az container delete --resource-group demo01 --name helloworld
 ```
 ### Show the container details in a lits aci
 ```
-az container list --resource-group cloud-shell-storage-edith-eastus --output table
+az container list --resource-group demo01 --output table
 ```
 
 ### helloworld imagen
