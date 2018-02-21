@@ -34,7 +34,7 @@ az container create --name acrhelloworld04 --image fisica3.azurecr.io/fisica3/he
 
 ### Create the container in azure - windows (docker hub microsoft)
 ```
-az container create --name helloworld --image microsoft/iis:nanoserver -g demo01 --ports 8083 --ip-address public --cpu 2 --memory 3.5 --os-type windows
+az container create --name helloworld --image microsoft/iis:nanoserver -g demo01 --ip-address public --cpu 2 --memory 3.5 --os-type windows
 ```
 
 ## Consultas
