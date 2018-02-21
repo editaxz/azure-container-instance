@@ -27,15 +27,16 @@ az container create --resource-group demo01 --name helloworld1 --image microsoft
 az container create -g demo01 --name nginx --image library/nginx --ip-address public --cpu 1 --memory 5 --port 80
 ```
 
+### Create the container in azure - windows (docker hub microsoft)
+```
+az container create --name helloworld --image microsoft/iis:nanoserver -g demo01 --ip-address public --cpu 2 --memory 3.5 --os-type windows
+```
+
 ### Create a container instance in azure from azure registry (acr microsoft)
 ```
 az container create --name acrhelloworld04 --image fisica3.azurecr.io/fisica3/helperconfig --registry-password 88GYVMmQ9Qqq8sM+1GQ2FHnq0PTSb/Ja --ip-address public -g demo01 --ports 5000
 ```
 
-### Create the container in azure - windows (docker hub microsoft)
-```
-az container create --name helloworld --image microsoft/iis:nanoserver -g demo01 --ip-address public --cpu 2 --memory 3.5 --os-type windows
-```
 
 ## Consultas
 
